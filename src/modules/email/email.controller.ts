@@ -2,7 +2,6 @@ import axios from 'axios';
 import {
   Controller,
   Get,
-  Param,
   Res,
   NotFoundException,
   HttpException,
@@ -61,6 +60,8 @@ export class EmailController {
     content: string | false | null,
   ): Promise<void> {
     if (typeof content === 'string' && content) {
+      
+        //Removes any blank space in the url.
       const match = content.match(/https?:\/\/[^\s]+\/comments[^\w\S]*/);
       const jsonUrl = match ? match[0].replace(/\s+/g, '') : null;
 
@@ -68,8 +69,7 @@ export class EmailController {
         try {
           const response = await axios.get(jsonUrl);
           if (response.data) {
-            const jsonResponse = new EmailResponseDto(response.data);
-            res.json(jsonResponse);
+            res.json(new EmailResponseDto(response.data));
           } else {
             throw new NotFoundException('JSON not found at the provided URL.');
           }
