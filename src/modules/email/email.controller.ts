@@ -22,7 +22,7 @@ export class EmailController {
     @Query('filePath') filePath: string,
     @Res() res: Response,
   ): Promise<void> {
-      console.log('filepath',filePath)
+     
     try {
       const decodedFilePath = decodeURIComponent(filePath);
       const emailData = await this.emailService.parseEmail(decodedFilePath);
