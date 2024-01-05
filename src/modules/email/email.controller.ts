@@ -7,6 +7,7 @@ import {
   NotFoundException,
   HttpException,
   HttpStatus,
+  Query,
 } from '@nestjs/common';
 import { Response } from 'express';
 import { EmailService } from './email.service';
@@ -16,11 +17,12 @@ import { EmailResponseDto } from './dto/EmailResponse.dto';
 export class EmailController {
   constructor(private readonly emailService: EmailService) {}
 
-  @Get(':filePath')
+  @Get('')
   async getEmailData(
-    @Param('filePath') filePath: string,
+    @Query('filePath') filePath: string,
     @Res() res: Response,
   ): Promise<void> {
+     
     try {
       const decodedFilePath = decodeURIComponent(filePath);
       const emailData = await this.emailService.parseEmail(decodedFilePath);

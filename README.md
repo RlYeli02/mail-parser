@@ -22,11 +22,30 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
+# Nest.js Email Parser Project
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## Overview
+
+This project is a Nest.js application that uses the `mail-parser` library to parse the content of an email with attachments. It provides an endpoint that receives the URL or path of an email file as a parameter and returns the JSON attached in the email.
+## Prerequisites
+
+Before running the project, make sure you have the following installed:
+
+- [Node.js](https://nodejs.org/)
+- [Nest CLI](https://docs.nestjs.com/cli/overview)
 
 ## Installation
+
+1. **Clone the repository:**
+
+  ```bash
+  $ git clone https://github.com/your-username/nest-email-parser.git
+   ```
+2. **Navigate to the project directory:**
+
+  ```bash
+   $ cd nest-email-parser 
+   ```
 
 ```bash
 $ yarn install
@@ -44,7 +63,18 @@ $ yarn run start:dev
 # production mode
 $ yarn run start:prod
 ```
+The application will be accessible at http://localhost:3000.
 
+
+# Endpoints
+
+## Parse Email
+
+- **Endpoint:** `GET http://localhost:3000/email?filePath=path/to/your/email/file`
+- **Description:** Parses the content of an email with attachments.
+- **Parameters:**
+  - `filePath`: URL or path of the email file.
+- **Response:** Returns the JSON attached in the email.
 ## Test
 
 ```bash
