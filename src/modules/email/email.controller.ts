@@ -21,6 +21,7 @@ export class EmailController {
     @Param('filePath') filePath: string,
     @Res() res: Response,
   ): Promise<void> {
+      
     try {
       const decodedFilePath = decodeURIComponent(filePath);
       const emailData = await this.emailService.parseEmail(decodedFilePath);
