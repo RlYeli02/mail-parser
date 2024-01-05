@@ -65,11 +65,12 @@ $ yarn run start:prod
 ```
 The application will be accessible at http://localhost:3000.
 
+
 # Endpoints
 
 ## Parse Email
 
-- **Endpoint:** `GET /email/:filePath`
+- **Endpoint:** `GET http://localhost:3000/email?filePath=path/to/your/email/file`
 - **Description:** Parses the content of an email with attachments.
 - **Parameters:**
   - `filePath`: URL or path of the email file.
