@@ -1,0 +1,137 @@
+Delivered-To: franyelizarodriguez191@gmail.com
+Received: by 2002:ac8:688b:0:b0:423:eb1a:17d1 with SMTP id m11csp402230qtq;
+        Fri, 5 Jan 2024 06:43:55 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IHnzfrEcLx6R7LmwbEAaRzaL75UvfZuWtJLsRo9GoEoJ1ulZDhd3fRAd5qOzBSdj8tOHI5Q
+X-Received: by 2002:a05:6102:524b:b0:466:fdd4:de8 with SMTP id bu11-20020a056102524b00b00466fdd40de8mr1516703vsb.21.1704465834750;
+        Fri, 05 Jan 2024 06:43:54 -0800 (PST)
+ARC-Seal: i=2; a=rsa-sha256; t=1704465834; cv=pass;
+        d=google.com; s=arc-20160816;
+        b=Bxnmt8UQ9YmbtDQsrQs0ynJHxczXzfZkYYcWrytf2IOOTDMQje5ySwnoZZQhLvhhY+
+         WaDYa2ehDtn5uK4e2bdTPFRMKEA9Q3wNZpVBg6BVqvq+BxLHeBbf8rrRjnG+zetK3lPf
+         CKZlEG0bVZVBR0JolaseQHR50A2Rutv+l3mig4b+6gdaonFUnLS83RELsgA8LFZQlUib
+         IVFUnyNZPrEQt7CQ0fAQhocgl2QKyvwKuvcMCzOOBVBl56nm8aOiv2RfXUtZIayhF7eA
+         MUnFWDYmu+kUZE9aWlgSuNpmh2eBkGYda5qOZHzX/tMpwrH4HtnaIwfWXoHL9lTD1UWM
+         BH7w==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:to:date:message-id:subject:from:dkim-signature;
+        bh=skeOyc6vu459vDEDm6/lpGFLkPmOGIk83ffEQEUjqLc=;
+        fh=jrm4IJclrVkbzWLGEdkjHbGfXMeZpCPLK2Kg8iDi9bM=;
+        b=LAZkVFKr+D8+aZPswsaZymQitFShK5UlyOMhySaB0pApg7aX8FmZLe6mdX6GkXuMVo
+         +xR6/GdDiOjtNJhT8aSh3EyEO0KGXY1PDkWK8G5qaVtDPFgo7q5eVIuFA4df+fHlEfAO
+         xbEgXOE8btKheuBUT1QTzAOiKGCAvJzdtw29WtFY2p7uNnGDxzsWAEcJIjsy4TgW9a3V
+         fvz4JL167XoejyYE+O3TR96o8YYbCZbQGwaJMz/NSAqLsYwzfk9/HIebVo4m/uM2oTGM
+         hjmDaMI3CGv2+wBJWsWlTRdrG1BG08nFAlJ50YmXVCW0p9OO/SP2JCjIdHUGWo/62G7A
+         6r2A==
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@live.com header.s=selector1 header.b=Ji+0446f;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of franyelizarodriguez@live.com designates 2a01:111:f400:7e8c::800 as permitted sender) smtp.mailfrom=franyelizarodriguez@live.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=live.com
+Return-Path: <franyelizarodriguez@live.com>
+Received: from NAM04-MW2-obe.outbound.protection.outlook.com (mail-mw2nam04olkn20800.outbound.protection.outlook.com. [2a01:111:f400:7e8c::800])
+        by mx.google.com with ESMTPS id w13-20020a05622a190d00b004290d54ea4fsi1943163qtc.715.2024.01.05.06.43.54
+        for <franyelizarodriguez191@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 05 Jan 2024 06:43:54 -0800 (PST)
+Received-SPF: pass (google.com: domain of franyelizarodriguez@live.com designates 2a01:111:f400:7e8c::800 as permitted sender) client-ip=2a01:111:f400:7e8c::800;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@live.com header.s=selector1 header.b=Ji+0446f;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of franyelizarodriguez@live.com designates 2a01:111:f400:7e8c::800 as permitted sender) smtp.mailfrom=franyelizarodriguez@live.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=live.com
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
+ b=aARxfH02zdOVqA9gBknTbavKpAJUbmCtn1wnM8uM14XeJhVZs//+k8oe3opMnUaIz1AShZKBPHhTK0AX7nhTLNl3z2yDTYbcEg5Nd38MidKGPENOgZDna7dQVYv8OZlBt13PDb2cFR9N3MR2WBZ73DObWqGozGV5Bsyfz5zW0m6q6PDMBL7xfS6INUgJRxj2sAyWo5anzqS7lTpF1VLN0AdKyMeffAVYH/E6pCDAkolgkD5RK1Pm7IOdKAG3k8p2X2O51HxtQZcBITniwBCnbkvo3/F2T+JzV7v9x7DuK90gFkZMt0lSHfksS+qygBOMhq0dV8z2FyxCQqa5qg1pnA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector9901;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=skeOyc6vu459vDEDm6/lpGFLkPmOGIk83ffEQEUjqLc=;
+ b=GDY+HANSNVatBYxPTittzHGBFBln3YnJvJScV3lqW1h6XhayWl84QixB+Mg8fDbzqQ8OhJ9R0/Da3PmHKFYulceNst8h3dz8qVXyV/0zr0AgKFjcs/MqV2+FpPGJXX5zrFao5Pdj/ol0eGvuxAEcf49JzfmoCCis7FSlwpnidNU3NpFjPUiXU90C98Pu7Ezn/2+mNpC6ms4m0ZFjkOh+l9VyQ+9RvvLVmJlPbAC1WWxg5yeVORRryNeFPAcUHWMhcCV9noOj9CAAYEtftIjN9N6wZdqVYuJooR0vi2tcjcXU7fmoFWB9VTufoSYV5PsVDRV0F5nnJ61lfAToKcBi+Q==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=none; dmarc=none;
+ dkim=none; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=live.com; s=selector1;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=skeOyc6vu459vDEDm6/lpGFLkPmOGIk83ffEQEUjqLc=;
+ b=Ji+0446frnwuGjmtz9Ti0aanXc4Nkz92ngazWAWy8T9yuRNPHUP+Xm+K+CIqNqecX+5iki6wTNZFmIeasdYt9obj0l1LY9znLcg5xvM805uElbQktOEGWX+dpXgBb1Z3VEZUF3M9bQ4wImBxahsQMUAa194soxFItz9LI4n45OvC9T9YjCexrco27YaGr1Bfmh9WO9s9YoxSjSUiBQNLoFacdBCiWvgZdHQLhOZdYAwEISiRCGGCQ9Q98XcDpBr4FfsvgS+ItQjbV0S9LpZhC608OQqEODmEw/kKg8MAGbiJ8J0EHRWIXzO0lQ4twOcY4mgIHY053x+x0EvF0UeOew==
+Received: from DM4PR12MB6543.namprd12.prod.outlook.com (2603:10b6:8:8c::6) by
+ DM4PR12MB5724.namprd12.prod.outlook.com (2603:10b6:8:5f::9) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.7159.15; Fri, 5 Jan 2024 14:43:52 +0000
+Received: from DM4PR12MB6543.namprd12.prod.outlook.com
+ ([fe80::2661:2876:9a32:e4ac]) by DM4PR12MB6543.namprd12.prod.outlook.com
+ ([fe80::2661:2876:9a32:e4ac%7]) with mapi id 15.20.7159.015; Fri, 5 Jan 2024
+ 14:43:52 +0000
+From: Franyeliza Rodriguez Lanfranco <franyelizarodriguez@live.com>
+Content-Type: multipart/alternative;
+	boundary="Apple-Mail=_5F05F7AB-D94C-423D-AA85-71CD4CAC7D44"
+Subject: JSONN URL
+Message-ID:
+ <DM4PR12MB654341F8A128FFE946595042D5662@DM4PR12MB6543.namprd12.prod.outlook.com>
+Date: Fri, 5 Jan 2024 10:43:42 -0400
+To: Franyeliza Rodriguez <franyelizarodriguez191@gmail.com>
+X-Mailer: Apple Mail (2.3774.200.91.1.1)
+X-TMN: [g5Nce6OVBom6u/AniMN+j2xIeB57IxVPcJ3xSLUJv9+0YSYD16A0yIYpD8LoKm7s]
+X-ClientProxiedBy: BN9PR03CA0982.namprd03.prod.outlook.com
+ (2603:10b6:408:109::27) To DM4PR12MB6543.namprd12.prod.outlook.com
+ (2603:10b6:8:8c::6)
+Return-Path: franyelizarodriguez@live.com
+X-Microsoft-Original-Message-ID:
+ <86562181-C4EA-49FA-A65C-96327CF6F8F3@live.com>
+MIME-Version: 1.0
+X-MS-Exchange-MessageSentRepresentingType: 1
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic: DM4PR12MB6543:EE_|DM4PR12MB5724:EE_
+X-MS-Office365-Filtering-Correlation-Id: 0952f7e4-ea50-4a79-fde2-08dc0dfcbc8d
+X-Microsoft-Antispam: BCL:0;
+X-Microsoft-Antispam-Message-Info:
+	9Pv2WKx0dzWMJoBI680g8apB7JmZWrg/F5x+qwOT+o6aNMQQsTOTecLWJc+W3VHso5czN21g8uQbpEwnGHgZLZMcMRbimF22juTIKoAswtH08VNlO8ETHHgqZPTogxjk4G+MG2JcnprJ15/4gM21nbcKzi/1nXrlUArOrDwR7Y71pllh+skPpw99yWEAAC0Y8hKqcmBE8j4bJG2nbbIagZX+6QmsAAjwDdy9ZwuOkkcrFetRYwpFGcvRhYwrYRfnc2HP7rLFkT3iMwa3x7Kvd0Hhdxf8yWHnx2tp5efBrdiFNBRf6zLgXHuBI665SQVBgfB+a301KVWwMA4QWduXQS1Vhcb/de/jraWQu6wXFZ4u/F3HvNociWPKA4hpxvK8MQm4I3ITaD2BaKdnG6DYlVtHuOGZFkcjdlwUs7EdR4oLs0/BuP3CbbsSdkXzON1JLZYHBpUISQnPH0V1B+glT2nWt0tCn67NifvXmeN2c1eDzxJZIIWxFERTmwCpa93y6qO4GsXIgW1mTCVUXL5Qw4zBFHs6XRT+lZ9K+x83ySTLXT2n87hFfwVGrNgWGwrOwT18VBXyW+RNM2ATQm0SZBs/a+MCgc2bkx/1HMRMFSKsECcDhCe6uSV1oXYJcGqY
+X-MS-Exchange-AntiSpam-MessageData-ChunkCount: 1
+X-MS-Exchange-AntiSpam-MessageData-0:
+	=?us-ascii?Q?yXyrcQR/HO2gICtR3Dnzi0ms6hs/LNphYA1b4kLAOBUfvZeqymEfW/8ir3np?=
+ =?us-ascii?Q?CjjS0jj9QhzPsgidvuMSwCiNdc1xRwXNDMPm8HtTozF7fCbB0Mflit/nZ8of?=
+ =?us-ascii?Q?oOHXzlL/RhtuIarHYsrYLoZ3rdUNIMcTyAPSDbVkSbfKqBjQzjmA+GPjFio9?=
+ =?us-ascii?Q?tsyUQqxBNEXGmOIJjaGCoj6ZFFYejmLtIKKspeGm6fKa3p9VGYN4ZepsvWO/?=
+ =?us-ascii?Q?w8YZmB04DCicwkHfVJvXO5JozK52HbqEdzE5Fsm3zIxWEcJi2bqA+iKPPQRM?=
+ =?us-ascii?Q?zCZXcmIkxHVcLpcQPkxP7cO4PBhNozfkkh7gUpZnGmRiTWcOzVnpUxjd7rha?=
+ =?us-ascii?Q?cRZP7aukHNhM19YlQtWHXJcdgksXNVFLezTSgwBlXdjSWrcT8h3DqCnRC7t9?=
+ =?us-ascii?Q?cVLzaLiWWtcq7M5BH5UK+TOtvZg+YqqSSeuczqYHNIjBuMQF4Iw81DkjIhUL?=
+ =?us-ascii?Q?k4UW4flu1Yaq6KhGmemif4xpCEBwjdYe17Emi6qxRvNqpwxroaqORkrYq59B?=
+ =?us-ascii?Q?BCP52+VvK/sA5qZQadFd59FU+xedbjvKan21SY4YcWjAIezeih8gXJxdbVVW?=
+ =?us-ascii?Q?nNycAgEwnkf2jMZhIDTmX/WRN9+fWljovXf9xXFdBOhDCK4hCzHRmZd2BEae?=
+ =?us-ascii?Q?pP7eGNU2FRNao9gWkscC0V3aGwYBeRq/O/dkv98BauMIqV4rPse09HfLIScr?=
+ =?us-ascii?Q?WpBVO8iIimbDSWcjbq4ziJKpEGRCxSsejXEw5A9RsttUjinYYhHDU1EXDwAL?=
+ =?us-ascii?Q?yQaxEvoH2aqRs3dI9LUrt0QZNC5wjBA5rBL5nLb9jfioxnvBvU/MM5sFOAWt?=
+ =?us-ascii?Q?DoBBnn1keYp+heWdblViZVgNGMPc0WjmRGW5LxynPHPH0nOFU69aPRUxK30b?=
+ =?us-ascii?Q?FhJrcj2/NsfhGt7IDJBRSkvnkvMeyue4p383hddGqSiv2E+C2Pgi9hllE334?=
+ =?us-ascii?Q?miawjW8Kmb57nLyrtVbBwC1Bb30ayBVNc5Lm0ONEfB1EycSP/oFLxdL2LeB3?=
+ =?us-ascii?Q?39f/5z6crFJFHggQr7JJKgDtxq7IQRooXw/SQStVXbv8aZx26V+HeqNaxKWw?=
+ =?us-ascii?Q?rdLow7gYAI/FiYnVkRHX94zL5QVfMIBjMT8JVukCOlS5cnMEHbNDMvOFGlAn?=
+ =?us-ascii?Q?9zw3opnuiTC7wS2If13oaSahSE4/JgFFFbX5MlXZlXIFSQCXm+Tdrxlo1f0o?=
+ =?us-ascii?Q?aeN1dvlLJK9Fv/RDd1kOtsBgJmsl6xgFmG3iJFohfCZwHGEnj+dPLuVuaWBZ?=
+ =?us-ascii?Q?4Xs/bRj5lcfqkfYVOo+gaIWJ1gHEgJQGHyt+7cMjm8F1FhZ5p+6chICtmgPI?=
+ =?us-ascii?Q?8LU=3D?=
+X-OriginatorOrg: sct-15-20-4755-11-msonline-outlook-5183d.templateTenant
+X-MS-Exchange-CrossTenant-Network-Message-Id: 0952f7e4-ea50-4a79-fde2-08dc0dfcbc8d
+X-MS-Exchange-CrossTenant-AuthSource: DM4PR12MB6543.namprd12.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 05 Jan 2024 14:43:52.8877
+ (UTC)
+X-MS-Exchange-CrossTenant-FromEntityHeader: Hosted
+X-MS-Exchange-CrossTenant-Id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-CrossTenant-RMS-PersistedConsumerOrg:
+	00000000-0000-0000-0000-000000000000
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: DM4PR12MB5724
+
+--Apple-Mail=_5F05F7AB-D94C-423D-AA85-71CD4CAC7D44
+Content-Transfer-Encoding: 7bit
+Content-Type: text/plain;
+	charset=us-ascii
+
+Hola https://jsonplaceholder.typicode.com/comments jeje
+--Apple-Mail=_5F05F7AB-D94C-423D-AA85-71CD4CAC7D44
+Content-Transfer-Encoding: 7bit
+Content-Type: text/html;
+	charset=us-ascii
+
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii"></head><body style="overflow-wrap: break-word; -webkit-nbsp-mode: space; line-break: after-white-space;">Hola&nbsp;<a href="https://jsonplaceholder.typicode.com/comments">https://jsonplaceholder.typicode.com/comments</a>&nbsp;jeje</body></html>
+--Apple-Mail=_5F05F7AB-D94C-423D-AA85-71CD4CAC7D44--

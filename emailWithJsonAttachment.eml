@@ -1,260 +1,142 @@
-Delivered-To: franyeliza.rodriguez@codeait.com
-Received: by 2002:ab3:6a8f:0:b0:24f:ce44:1e9b with SMTP id v15csp152113ltj;
-        Thu, 4 Jan 2024 19:19:19 -0800 (PST)
-X-Google-Smtp-Source: AGHT+IGOrQh+4AByouAqsb3EESZMHsQ9V4NmSgDQPsC9jZuPaqdes+2XBbC8HW7R+tSfmZzVHVcX
-X-Received: by 2002:a05:6214:2a82:b0:680:c468:ec with SMTP id jr2-20020a0562142a8200b00680c46800ecmr2086624qvb.39.1704424758441;
-        Thu, 04 Jan 2024 19:19:18 -0800 (PST)
-ARC-Seal: i=2; a=rsa-sha256; t=1704424758; cv=pass;
+Delivered-To: franyelizarodriguez191@gmail.com
+Received: by 2002:ac8:688b:0:b0:423:eb1a:17d1 with SMTP id m11csp401747qtq;
+        Fri, 5 Jan 2024 06:43:00 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IE4098YjVd4gdWK9D3LEd126V/5OJ92cWal7OnZaAILOAzdKaZ3KTA6msVcMQpYvlIIs5Sl
+X-Received: by 2002:aa7:8c0b:0:b0:6d9:b417:1afe with SMTP id c11-20020aa78c0b000000b006d9b4171afemr2218494pfd.32.1704465780415;
+        Fri, 05 Jan 2024 06:43:00 -0800 (PST)
+ARC-Seal: i=2; a=rsa-sha256; t=1704465780; cv=pass;
         d=google.com; s=arc-20160816;
-        b=ckcK0tn6522gKfPK/NuNXW6tNSESeF5FUELxjA/5o5QKs/McAeH1y/CuaEVAvqS1zA
-         xgFjp5Gspi9sBDKNDRlqvh4laWxJi/GjeOQzSXzCUioJ0pxMfQwE/Y2gPMxeeOZB5faf
-         +7yYuqmoNw1inhPXndGtaoVyyhIiS2jrDupKz785HMlYIdAikWJGOJ0gtXEDYUW5MAYf
-         OqgKMr+aZinBxr6MONVCRHBXSr51+IHOxH0CfviaCIz3gvHyilpSlH3aC1LPSU4mYaCl
-         4R8yIVUk2eLpqWvPv45coOMaHukgJgKMGM9EFQ0f/XQkCNq21pySPVIkAMqAYEtUDN3Y
-         my2w==
+        b=W0kEZwXzeoClu1CLKRxdnJK8/SCsD6oqP9wKHQU6ZTmVN3hx6x9p6soWOwvicjV3yt
+         BGlIhqja/YTtpEcxFqS8GW3DI0028K6y06k9MgJ9Bhcux7KxLzuCMcd/E3zFpN8VvNPb
+         cEhA1oiVTlVhQOngHmkNxfecxFL+BIhe3cRJ+/50WZRVeG+2IhKhvmcCdSe+JsojkbWM
+         xbxd+RI4/zAceadRKeaeTBKwAVuTRYVWenPukr0F9RAofdg1vv4AAhA8niAEmiheLnx/
+         m9RZIJ9ntsbrHa41Gu78c3DmJ2zrxh6rmTasRIa6mgkTTlaCGOteGtXHMF7vNp5aRsgo
+         o+eg==
 ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
         h=mime-version:to:date:message-id:subject:from:dkim-signature;
-        bh=p4ZqDAE4DborZce5lpPbMTK/Y5vq0yiQMYyw0DoNTEU=;
-        fh=YCx/2eorpS1JfPwl5fmTBnE9BWW1MRkQQDIR06+NyTg=;
-        b=MLrtUmYLLK30gb/6AEWnWixm5Gd8Mvlqf90Afk7hqO5rDmbaGgeleUgdQYpE0/EEXF
-         zwL9NQ8CRpk7mBkR2FJKmxFxgaJQARpo8VkFkOGhzHVf+92D+Wk5OIuDkRpH7ptpET2P
-         cHgIZ/puEPPLM/vyBBN8r8NVCGgJoHRAIcP/ChoStTJ27Srb6OGJBUgfG3IIpTGdwXR+
-         H7EadvYc9bmaRKxzDBUoJAtm313l+XbQLFySMWqVpIXFpTJlsYXbvy0RhvCi/O4syx0d
-         6j01PO8jAEFzpUj4ZK39Y4D0IG0Fnja4fflr//MslYvtMKPvm1KzzvtmMkq9y4ro7r1k
-         9RlA==
+        bh=l6b5XQkhII337GFPKIqUE6tmRkDeEPN7811D16SrBm0=;
+        fh=jrm4IJclrVkbzWLGEdkjHbGfXMeZpCPLK2Kg8iDi9bM=;
+        b=dzWKclFKOnGTEurIeWc9fubIrdkgEvoazBSFMA4JNAaVEjrZYCY8Bf619nt3sLH8pp
+         DmOB2MUF1e8AcyxYbCfMG/U6VH87TG+2JhG2zSSZOi/pyc8/BRbAB3antLcaei/+59FE
+         0dTzDbRsOJirkWCn1Ix3X9MpoyQE69mfAWmBLhMlhdCn02HGLTqp3XFs667modi7YyhY
+         1BhRbqMObf97IBR37o6YK1ie4B8432NYmLbCZIJGXwxQX1SW3PTXbT9+oIkKB7RE+Nvd
+         /0BHNGVpdUUWn0R6DzEjchFPtZ4nAp320Tm+WsffyNby0kdY68unnlY81c7zqmJ6k4F5
+         HK5A==
 ARC-Authentication-Results: i=2; mx.google.com;
-       dkim=pass header.i=@live.com header.s=selector1 header.b=HZzWupK0;
+       dkim=pass header.i=@live.com header.s=selector1 header.b=Ep5BEmVX;
        arc=pass (i=1);
-       spf=pass (google.com: domain of franyelizarodriguez@live.com designates 2a01:111:f403:2804::801 as permitted sender) smtp.mailfrom=franyelizarodriguez@live.com;
+       spf=pass (google.com: domain of franyelizarodriguez@live.com designates 2a01:111:f400:fe59::825 as permitted sender) smtp.mailfrom=franyelizarodriguez@live.com;
        dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=live.com
 Return-Path: <franyelizarodriguez@live.com>
-Received: from NAM10-BN7-obe.outbound.protection.outlook.com (mail-bn7nam10olkn20801.outbound.protection.outlook.com. [2a01:111:f403:2804::801])
-        by mx.google.com with ESMTPS id s2-20020a0cb302000000b0067a9b390603si886601qve.552.2024.01.04.19.19.18
-        for <franyeliza.rodriguez@codeait.com>
+Received: from NAM12-DM6-obe.outbound.protection.outlook.com (mail-dm6nam12olkn20825.outbound.protection.outlook.com. [2a01:111:f400:fe59::825])
+        by mx.google.com with ESMTPS id y14-20020a62ce0e000000b006d0e1cc26a8si1375300pfg.197.2024.01.05.06.43.00
+        for <franyelizarodriguez191@gmail.com>
         (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
-        Thu, 04 Jan 2024 19:19:18 -0800 (PST)
-Received-SPF: pass (google.com: domain of franyelizarodriguez@live.com designates 2a01:111:f403:2804::801 as permitted sender) client-ip=2a01:111:f403:2804::801;
+        Fri, 05 Jan 2024 06:43:00 -0800 (PST)
+Received-SPF: pass (google.com: domain of franyelizarodriguez@live.com designates 2a01:111:f400:fe59::825 as permitted sender) client-ip=2a01:111:f400:fe59::825;
 Authentication-Results: mx.google.com;
-       dkim=pass header.i=@live.com header.s=selector1 header.b=HZzWupK0;
+       dkim=pass header.i=@live.com header.s=selector1 header.b=Ep5BEmVX;
        arc=pass (i=1);
-       spf=pass (google.com: domain of franyelizarodriguez@live.com designates 2a01:111:f403:2804::801 as permitted sender) smtp.mailfrom=franyelizarodriguez@live.com;
+       spf=pass (google.com: domain of franyelizarodriguez@live.com designates 2a01:111:f400:fe59::825 as permitted sender) smtp.mailfrom=franyelizarodriguez@live.com;
        dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=live.com
 ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
- b=gMki+b6KqslTa4vr6Ho264tE+vbZV98LYOcY4CrIDt4hNoOqM69KmvbZDby7EatKlOAAz0nXWrdUsdTMs6AV3S32USnXaCYm4GyE27LvazMB2tKSd/eQKWyRV0uvOz0kxkpZmS89eLJ5Z3hWkOKciXrWD/XiMlshXPOT98JPcjF41lnIQ2xI+s2L+jUvMnvgJY5sFkz/5sULoPLr2AWy1e+qx8sajRcq3J+Ztw2u9qASgUmRnO+J8Iocp655gA4RkbEXuFdToL92eKsItL5CegF+i+cY9clwHgmq5pblH81tiZ72nEagLqO3yxzT8dKRr/ZfkW+eu1XcuEh7q26Q5g==
+ b=bPxrSoke5kzuthvvDkFzGmE2mcLOHX9Xg0F+VzlEDSuUmJ3CkkAyy01u7GLLA1ZngWvcsVY/RfiykBkaGCcXrgiLigisJ2EYvnvYwF3h4jLuSTqSPYr1TMwe3J3mJ8syVVmQJAY2AlrFE1Pnm+kX6lhI3EJQUFeHARxwHdFiHMl8BLlx+JtTe7EVur2Fw1QkhdsYmWsX1wE0QQbzEizIiFU7xG2SqeUzUPBDBT63A3zSPTp0inqkU13QLzleQe7YQJc7IfAjo2yQEiTwFCeHeTAFXW9aFluPxjc4g7jj+YOdwph5KbH/1Mc59+YMaT1PYYBYgrScxG/0ShSxTpHDAw==
 ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
  s=arcselector9901;
  h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
- bh=p4ZqDAE4DborZce5lpPbMTK/Y5vq0yiQMYyw0DoNTEU=;
- b=EMBOTnaea+ktdvdsiP2RZ2ejWUp5MAvtC+ZTsLirMz7uyz3VjNOzZYd68Fihylu/gol43dGHccFDH3W+6htOKYJnaQTxWk5Yf/99FwCHUurJmlEUntzxpzsxe79KyK0Sc0FMAdskhN/9n07owJVfp5kZLT5GeboaDC9sgV5ohweZmMct+/8pT57cmpj9qpT1V+A+95Gq9d7p7uWy2m2ZOcT1s7ZkfYZS+SvA/tgybyrXaTibmBDjVq8E95F07fA6dyNWXOQi4aGa4VqL/wMhipYntx0P6z8X5Dfc/136SiaxbT81Do9BzQCU8ji0G4KZlGVxtJSqrfJS9OBakRPNuQ==
+ bh=l6b5XQkhII337GFPKIqUE6tmRkDeEPN7811D16SrBm0=;
+ b=NVfPifb5nh1LAsnWq2CgQIVaq4T/+Rgus2iHc3deJ+kyzRSSt6hBaY3yPGXST2+f+sbh2+cCMf1mvQVNjDkIant5aLZ5b6Wg7VkxFi8FQNJsx/pY0pSF9wDRR3fb9/FfZcDfnVU5/J0+u68LVjO6WUuJT6MZELc+S2xrGhIBRv4gsZTdTXYMIHCQCID8G2L7ymrDOYILQVIYwN4tGQktlwxhAbG6uZ/FWj05HUEmAu5uRQaQ8alck2im50Szk5fDKHBHLuDGap0EvImTeFzvfsUEdhQ9beJY6gaiQR5fpd/Z9ls3DksXRw5giQMeLKCoRW3860F+WRok2zOeNdgc3w==
 ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=none; dmarc=none;
  dkim=none; arc=none
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=live.com; s=selector1;
  h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
- bh=p4ZqDAE4DborZce5lpPbMTK/Y5vq0yiQMYyw0DoNTEU=;
- b=HZzWupK0UOgKW3aTpRTIxqGz9CxuebZ8A33bYy86CjjKCttpUuFKBFaOofTfmhWid6wW7Ks+3NfTVB9fY5IJRH1L6UctWWCm+FDPwKd1qMedRn1HYwyGfh+kR13+Rc6cVCTU59ZVeAqK0pZNI6Du3XqMSgrtAPgAZjOtz1/KDLctHRU2b32FDb3nk6RaNkGvi2U/bpBXMKVlZaPXqEQcfQPbJ40OmM4pmsJR/mlUo4XotY8ykAApqeXP+EEq/8xTv66dZiVR3WxPZjqz1iXqQDKRlLtWjoHaRUN5Ex2YW5O1UaO8/+G4HnQ+TRMHe37B633StS5Qlu+8WlZ3dU+bfA==
+ bh=l6b5XQkhII337GFPKIqUE6tmRkDeEPN7811D16SrBm0=;
+ b=Ep5BEmVXUfCdfUm7j3NaJ6+rW1iyDL70c3oHLBLu76T+vPTxGsKYILXHI4KkkzMRQuu9xseb5Gw+HZvS4zSUT2EbIC9qEbnYuJEb7prsEJ0kkSuwTGM6KO/TX+/VL4IR0ZL9xdYJ9pHGkKFdJVWq/MC2BjDTeJhjNDoK0q1PwZpPezsvyEAfklG3p9NOzzabs9iIc4DnRFMm10NPosPQaGQDhgn1XsWSr92p4CkfGosxjmyYQklXTwebDulQSrg4PXem29Lw5YpyBn2oVsTIn/FaC5ONrpT61kP8gktUvwJ8475XPmMwFz+bpe65XeWgr7ztR9ExeIGVc5GGOxfDRg==
 Received: from DM4PR12MB6543.namprd12.prod.outlook.com (2603:10b6:8:8c::6) by
- BL0PR12MB4962.namprd12.prod.outlook.com (2603:10b6:208:17e::23) with
+ IA0PR12MB8206.namprd12.prod.outlook.com (2603:10b6:208:403::11) with
  Microsoft SMTP Server (version=TLS1_2,
  cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7159.16; Fri, 5 Jan
- 2024 03:19:17 +0000
+ 2024 14:42:58 +0000
 Received: from DM4PR12MB6543.namprd12.prod.outlook.com
  ([fe80::2661:2876:9a32:e4ac]) by DM4PR12MB6543.namprd12.prod.outlook.com
- ([fe80::2661:2876:9a32:e4ac%7]) with mapi id 15.20.7135.023; Fri, 5 Jan 2024
- 03:19:16 +0000
+ ([fe80::2661:2876:9a32:e4ac%7]) with mapi id 15.20.7159.015; Fri, 5 Jan 2024
+ 14:42:58 +0000
 From: Franyeliza Rodriguez Lanfranco <franyelizarodriguez@live.com>
 Content-Type: multipart/mixed;
-	boundary="Apple-Mail=_09F4F225-03DB-47C9-9D59-F84A382100E3"
-Subject: TESTS
+	boundary="Apple-Mail=_5D381553-2BFE-471D-B817-66E9A73B4661"
+Subject: JSON
 Message-ID:
- <DM4PR12MB65434900E1835B93AE27E65DD5662@DM4PR12MB6543.namprd12.prod.outlook.com>
-Date: Thu, 4 Jan 2024 23:19:02 -0400
-To: Franyeliza Rodriguez <franyeliza.rodriguez@codeait.com>
+ <DM4PR12MB654397561463A4B787F3143DD5662@DM4PR12MB6543.namprd12.prod.outlook.com>
+Date: Fri, 5 Jan 2024 10:42:44 -0400
+To: Franyeliza Rodriguez <franyelizarodriguez191@gmail.com>
 X-Mailer: Apple Mail (2.3774.200.91.1.1)
-X-TMN: [hFrcVyEVA9h9/EiCszvCPxAQVozJut3F]
-X-ClientProxiedBy: BN9PR03CA0173.namprd03.prod.outlook.com
- (2603:10b6:408:f4::28) To DM4PR12MB6543.namprd12.prod.outlook.com
+X-TMN: [rLE5rLCDlRLSnLt/6mWG/z5k4d36/UQJe46QcuqmqAJStXmDh7HBLUoKeP/dnrgr]
+X-ClientProxiedBy: BN9PR03CA0982.namprd03.prod.outlook.com
+ (2603:10b6:408:109::27) To DM4PR12MB6543.namprd12.prod.outlook.com
  (2603:10b6:8:8c::6)
 Return-Path: franyelizarodriguez@live.com
 X-Microsoft-Original-Message-ID:
- <B597FC8E-8687-4FA6-8FE5-972CF9D1ABC9@live.com>
+ <114EB16D-6BB5-4EE0-92AF-6C6DE7B88CE3@live.com>
 MIME-Version: 1.0
 X-MS-Exchange-MessageSentRepresentingType: 1
 X-MS-PublicTrafficType: Email
-X-MS-TrafficTypeDiagnostic: DM4PR12MB6543:EE_|BL0PR12MB4962:EE_
-X-MS-Office365-Filtering-Correlation-Id: f96c6910-ae1b-4feb-4ab2-08dc0d9d1923
+X-MS-TrafficTypeDiagnostic: DM4PR12MB6543:EE_|IA0PR12MB8206:EE_
+X-MS-Office365-Filtering-Correlation-Id: 4d1fa414-f341-4494-62ed-08dc0dfc9c27
+X-MS-Exchange-SLBlob-MailProps:
+	c9/CzQ6A0Fy2qdrd80gTRlcRCt2nkQ9U+xj8sWtEkRH78oPBORVHlIM4YHv9I14+9HO3wJMrwVqoIiv42fWzJsDT/HXbP1KORkL9Utb8Ro5o91+ktIHe1zNMcQk8DX/YU3XM7XGH3xVxoS6V+037EqclxfDJx4gb7WkZ9Lpy0S3lAzLfYw75nVIz5sTwmvMfqxkMOdXJpk1TrQLPaSbdQ3cSKHpbaYMl+vhwie8GkOv68wXtyHLZZTb1uodlAcFZZn1oWW/BShN+m8QNnUGCJSJdKxZ8DtD3yXxiGq0OsBmAlbpiQ/hn6nbmLCSC4IysxHVci9R0Qw+w4/jM6rxG1nximCtaTkm1fnDsWhuWhwZcPUEBFW6dTikrz5I9v0nV8SwLwZNk3sXQe8ZmKYvYLXDJXuuYrApl0iWCVrD+v9d4UvnLPybNHtBpoP9Jm7Yk4GvwGhwUETRDW2/Cjc2NQ7pMRFkJG2c1zqA1aeHZA6UQk7g0crufYQjqvQsrAgHd0Bz2vF9BPit00gT3leW/+VJMzGRizjYo7mhJ8CZvmGG9vKjqVjwktcSrsMf3f2rKwckihFBUX1AXH2qYGY7SBP2EMSbvnzOopT3UMIisFaI=
 X-Microsoft-Antispam: BCL:0;
 X-Microsoft-Antispam-Message-Info:
-	EDzKbw2YeDmXSp7nI6FsXru8iGEOGvVf42SV3PMFTj056EzHGJNpTtGM1x/o8Vgi5WiuUiELDlqJsDFmSn2Q43CCFjQ9NRNK3GjhKRv1cdNHKSv32tUh7zbgpXlCER9icgVn5Uzotb+K16FSJzmI9PMcmvBs0ZJv5EZ/Abgcae3TYhOKMTyQbknHIK4ii11S8hkKqd0gycvz5SRZFIodbWPZmNhbEMJaW8PzCTIPSd+XGNEap4ZP3oGyNqLJ1yFRHBFWqt6UsvUrVyXo9YRDQEtM0/gx/5q7KB6BfyjcL9QUP4Z81rmBORLaRCZuyrs8
+	nqR0wO9044z/S703maf55asJydxk13sJ5Sf+y9XDMVII0TvLhmjv2T3QLk9L5QeMX+oWHeNyA1EqgOFyNJ7umwGDwSQztnL/XXBNRHGlLhyffzdXWf1GaXmQyWSp7eKae4Qyp4V8JVXLRrJcn8swdy0Z6JXBQ3yvo5FEvtxZzcGeuhXAIFehR4Eq16R2e77khLlRqQIErepk8YybgtO/4GVzk0bmjdqqQEZGeJRMq24k9Z6cNt+YT960whM69POqp3inBYVKbCw+DOBTljEjm8kMZNu2+AqXidY/STSUQI5B46brUMJWOjGMekWxleGq
 X-MS-Exchange-AntiSpam-MessageData-ChunkCount: 1
 X-MS-Exchange-AntiSpam-MessageData-0:
-	=?us-ascii?Q?QhhqoGRuQVZq2b0tdKOgxJAx7racgoI7q8tpUQidEyj1RjLvdRI3AddxnNwr?=
- =?us-ascii?Q?EUg12lHlWZCfV5qEVEAcO/xtzGP3yPDz+sLBF+1NIVYdGUmxPD3/TcJmc6Q1?=
- =?us-ascii?Q?6V/hvRxF+enSKDXrpBb8w1B2anEn9nPgdd4b0hKGunAYVCfhPskkqH4T+Amu?=
- =?us-ascii?Q?5fJY1ry0uY7BSKZl1Kmpvj8BVdwcxuKs+0p2Psa7ArhSN7Jo8zJjsSLOShCy?=
- =?us-ascii?Q?quONJ/IHQtOWUnZKWQ1ZuvhaeN55Lzq2mFcDXgedzOgpo5thVGgsjGwQBodT?=
- =?us-ascii?Q?SwVBBHBd2GH0N24y8XzPiGZj4nCOloDyIKYT8eZwSOVwMH1feziRy5ciTRMp?=
- =?us-ascii?Q?C3EWnbwpiigvxRO15xvtwxORta9TcHo7ADynYLqihOZwJ9bFLinCYm4RuQTL?=
- =?us-ascii?Q?JxsOsVeS6aDT9bB65/rTkF1wWUX/tCbr8sv/yXzQVm5S6RlGJuy7PDzjztVg?=
- =?us-ascii?Q?2EbZe6gXf3FL1zkV8/1bCQR000ZqYYx6bkrR6HFfL179utEIx8k+p3N4peJl?=
- =?us-ascii?Q?LtFDRN6QAFz8iFr2Pp9vrTT+DoI1dJHDKRYYIYagm+fFkY8ZamS5hYFqFcNh?=
- =?us-ascii?Q?CIRNVY7CbtIOrxDroz7/iPioH1g1rWBRGeJDJHSOezeNYHHvnb8ujBpe5OJS?=
- =?us-ascii?Q?VKn+1AqAoWqE1w+4FEoHRfnwuZjT03+036eFuXwwxKiOg+ZleYOqGXdXDb2e?=
- =?us-ascii?Q?vfSckgYCxT7PkV8Nf3/SEBC7HYxmRpMe8uWuQ9R6dG3q1pCgDZKg1pMKtyUw?=
- =?us-ascii?Q?fN4WbFir/CHYJHVa+fh1+m+GUF9ipgRTpg11BDTcICEO0LBdaXZz3IgnPNeX?=
- =?us-ascii?Q?BUUaeQZDykVHrqKGe3CitG1FeUBZQZ6AgUsLtGXQqQAPzMA0fmXLOr0V5Q9U?=
- =?us-ascii?Q?Qgnfmyvsje559HkqRaSjl20P7SViOAvN3P7Pf1rj2CoOXxxL3hU88OmBEFGI?=
- =?us-ascii?Q?FzT3eXpPlRnVTpQJl8TjbAfHle7n3ujvBt5oJu6ofwX8Zv2oR0ZijY7IcR1j?=
- =?us-ascii?Q?Mzggdmx5Hk1L6ppqQnOBxv320HPS8xw3DsS+4xe68o/QkZ3zEc+pfKhcUyf7?=
- =?us-ascii?Q?Mqu1/UAiER9tu58scNkXsLS/NosY9HmNC7FNrd6cbfBqO2JoEh5LBZiOcreC?=
- =?us-ascii?Q?B+/ubvoPPNE/mfjuE8j0S+3hKk/XEnM2tCvGCf0IdNNV4WhQH2glW4KbDeQP?=
- =?us-ascii?Q?jTBnsnRHQ3tUnzRYpKK0cNZCNZu3Vex7RvNaX15QgvFydcrJQM0m6JF8G7k?=
- =?us-ascii?Q?=3D?=
+	=?us-ascii?Q?OgteyqvlaUh8RPP0q/Oav5/5eQz8Yc4Dkohufn713BpUsCN4Ln0+FNTKX0L4?=
+ =?us-ascii?Q?Gg+59MQk4aUOm76FGi3TJxOVFRgc7jyW19rjQBVlZkIgiZoBaEgK5ABXVEHo?=
+ =?us-ascii?Q?eAE94R/rOMhWtCBGr30GISqulmcQl5GihQQrnYaVSbU8NkHjYHE4S5OuQ82H?=
+ =?us-ascii?Q?J65EME1nmVWRRaauJfv5uujVVCIAm7RXcZYh0DFo+113U4mrCj8hDcHjCP8d?=
+ =?us-ascii?Q?9FmKoJaRPFpykF2H+Yy2otOLkqknob8CDNJgEEzIJW+NJUVlArnO4K2zXTjj?=
+ =?us-ascii?Q?uAPPQB6OJKRKUgT2dOQMNAysD6tmfNe9Y9XJChQ9QdbZy1p/cjeUL+73jh1C?=
+ =?us-ascii?Q?zpyVLJIfaO+2V9/7jiBBYERkPVmUlUEbiyK/EB59omclAYC+8+3zw9MFBMhb?=
+ =?us-ascii?Q?BpuxfKgFuauz2L/+8EvPxkCbOhYAVYyRI2ZVZRknUYzGFzri7ynV1MtCOGsw?=
+ =?us-ascii?Q?QtCOcaXWkrkJDJpAvVzZ5TmNnGvqubCyHnVC+NGDYl6wTJilmTgtDow2rOPb?=
+ =?us-ascii?Q?NYUKv0oBzQP8HoBiKF2DS8HhEkdcPRpeKG9/IZtMigTjym7J+Gf18y4S8jl9?=
+ =?us-ascii?Q?MwHgTVS9naRZ/oMnEsc6tqvWpE0hqhByAxfi2m73ZRuWMeM/PxmGuiAN+Ztm?=
+ =?us-ascii?Q?wdyGerLFO/Esqvbzq20+ZHKqFhnTW1vAiJPPdjrcIxQQ2gvqJJ/rtk3YK7lc?=
+ =?us-ascii?Q?GmbYhDEKLKYsdDq2KyVxSVCQx/urVZ5+n+Fv2IF7upcVrJgmdRw2Q7TBowNB?=
+ =?us-ascii?Q?fkaTVlgj6tTKZ2qhu4z6QserEWLm1LBf+cvjKedVLqqxrYHZdVBz5nNveS9T?=
+ =?us-ascii?Q?Zjn3QCPAbuzc/tjd4LTix4DQC4AkgC3Qq6LIoDYOrLgcIuvLVzrQJrXzHAVA?=
+ =?us-ascii?Q?e78WSazwWm0wd17HoOwuWbzeYMu3Y/qom9xIig1GXoxFKDRPOlRxOwax7QZb?=
+ =?us-ascii?Q?lmhnWfuzkrxCsjpAkielFv7j5q9HAxDVyHCYdV93ejhzqU504saezPhKEnQu?=
+ =?us-ascii?Q?rvcB2CIZliuUva+f6nBlzowTr9PCOgExNtvnTzXgovfQoqI3RGbUw7zMF7uY?=
+ =?us-ascii?Q?W7stj6X9SfCeZx81DPvqnI4fxGsx2HKN1ZHJgCYdHP1g2JFGvVKCTh+bVy9V?=
+ =?us-ascii?Q?BBSbyfkL0Yi5A/uv3UmBgYYhrxmj216RODG9rff/9ncFCDEVDt553VXVF4pB?=
+ =?us-ascii?Q?v1wAvI/7EQ3lZs7WWxDR+IIZXjXdCxsAaIku+zJE2CMrB+8SnjToThZhUP5t?=
+ =?us-ascii?Q?gm2+tFNSx16+tQqXJxs3NSUewg0SA7pZxkpCSPaNMOJd3E8P4tfd15dE6p4d?=
+ =?us-ascii?Q?Xl8=3D?=
 X-OriginatorOrg: sct-15-20-4755-11-msonline-outlook-5183d.templateTenant
-X-MS-Exchange-CrossTenant-Network-Message-Id: f96c6910-ae1b-4feb-4ab2-08dc0d9d1923
+X-MS-Exchange-CrossTenant-Network-Message-Id: 4d1fa414-f341-4494-62ed-08dc0dfc9c27
 X-MS-Exchange-CrossTenant-AuthSource: DM4PR12MB6543.namprd12.prod.outlook.com
 X-MS-Exchange-CrossTenant-AuthAs: Internal
-X-MS-Exchange-CrossTenant-OriginalArrivalTime: 05 Jan 2024 03:19:16.8816
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 05 Jan 2024 14:42:58.6316
  (UTC)
 X-MS-Exchange-CrossTenant-FromEntityHeader: Hosted
 X-MS-Exchange-CrossTenant-Id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
 X-MS-Exchange-CrossTenant-RMS-PersistedConsumerOrg:
 	00000000-0000-0000-0000-000000000000
-X-MS-Exchange-Transport-CrossTenantHeadersStamped: BL0PR12MB4962
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: IA0PR12MB8206
 
---Apple-Mail=_09F4F225-03DB-47C9-9D59-F84A382100E3
+--Apple-Mail=_5D381553-2BFE-471D-B817-66E9A73B4661
 Content-Transfer-Encoding: 7bit
 Content-Type: text/plain;
 	charset=us-ascii
 
-
-
-Prueba json
-
---Apple-Mail=_09F4F225-03DB-47C9-9D59-F84A382100E3
+TESTING 
+--Apple-Mail=_5D381553-2BFE-471D-B817-66E9A73B4661
 Content-Disposition: attachment;
 	filename=response.json
 Content-Type: application/json;
 	x-unix-mode=0644;
 	name="response.json"
-Content-Transfer-Encoding: quoted-printable
+Content-Transfer-Encoding: 7bit
 
-[{"Name":"CUENTA DE NOMINA  terminada en 3570","Type":"SV","ProductId":"357=
-0","Signature":{"AcctType":"SV","AcctId":"9900103570","ProductId":"00032","=
-AcctBal":[{"BalType":"Current","CurAmt":{"Amt":"43156625.07","CurCode":"000=
-"}},{"BalType":"Avail","CurAmt":{"Amt":"43156625.07","CurCode":"000"}}],"Ac=
-ctStatus":"Open","StatusDesc":"Open","Nickname":"CUENTA DE NOMINA","Desc":"=
-EXENTA","StatusAcctDesc":"Activa"}},{"Name":"Ahorro Puro  terminada en 4748=
-","Type":"SV","ProductId":"4748","Signature":{"AcctType":"SV","AcctId":"990=
-0104748","ProductId":"00022","AcctBal":[{"BalType":"Current","CurAmt":{"Amt=
-":"11.82","CurCode":"000"}},{"BalType":"Avail","CurAmt":{"Amt":"11.82","Cur=
-Code":"000"}}],"AcctStatus":"Other","StatusDesc":"NoDebitPost","Nickname":"=
-Ahorro Puro","StatusAcctDesc":"Inactiva"}},{"Name":"FlexiDigital  terminada=
- en 6531","Type":"SV","ProductId":"6531","Signature":{"AcctType":"SV","Acct=
-Id":"9900296531","ProductId":"00034","AcctBal":[{"BalType":"Current","CurAm=
-t":{"Amt":"2431312184.97","CurCode":"000"}},{"BalType":"Avail","CurAmt":{"A=
-mt":"2431312184.97","CurCode":"000"}}],"AcctStatus":"Open","StatusDesc":"Op=
-en","Nickname":"FlexiDigital","StatusAcctDesc":"Activa"}},{"Name":"Ahorro P=
-uro  terminada en 8849","Type":"SV","ProductId":"8849","Signature":{"AcctTy=
-pe":"SV","AcctId":"9901208849","ProductId":"00023","AcctBal":[{"BalType":"C=
-urrent","CurAmt":{"Amt":"0.00","CurCode":"000"}},{"BalType":"Avail","CurAmt=
-":{"Amt":"0.00","CurCode":"000"}}],"AcctStatus":"Open","StatusDesc":"Open",=
-"Nickname":"Ahorro Puro","StatusAcctDesc":"Activa"}},{"Name":"Ahorro Puro  =
-terminada en 8992","Type":"SV","ProductId":"8992","Signature":{"AcctType":"=
-SV","AcctId":"9901208992","ProductId":"00023","AcctBal":[{"BalType":"Curren=
-t","CurAmt":{"Amt":"0.00","CurCode":"000"}},{"BalType":"Avail","CurAmt":{"A=
-mt":"0.00","CurCode":"000"}}],"AcctStatus":"Open","StatusDesc":"Open","Nick=
-name":"Ahorro Puro","StatusAcctDesc":"Activa"}},{"Name":"Ahorro Puro  termi=
-nada en 9223","Type":"SV","ProductId":"9223","Signature":{"AcctType":"SV","=
-AcctId":"9901209223","ProductId":"00023","AcctBal":[{"BalType":"Current","C=
-urAmt":{"Amt":"0.00","CurCode":"000"}},{"BalType":"Avail","CurAmt":{"Amt":"=
-0.00","CurCode":"000"}}],"AcctStatus":"Open","StatusDesc":"Open","Nickname"=
-:"Ahorro Puro","StatusAcctDesc":"Activa"}},{"Name":"Ahorro Puro  terminada =
-en 9296","Type":"SV","ProductId":"9296","Signature":{"AcctType":"SV","AcctI=
-d":"9901209296","ProductId":"00023","AcctBal":[{"BalType":"Current","CurAmt=
-":{"Amt":"0.00","CurCode":"000"}},{"BalType":"Avail","CurAmt":{"Amt":"0.00"=
-,"CurCode":"000"}}],"AcctStatus":"Open","StatusDesc":"Open","Nickname":"Aho=
-rro Puro","StatusAcctDesc":"Activa"}},{"Name":"Ahorro Puro  terminada en 93=
-03","Type":"SV","ProductId":"9303","Signature":{"AcctType":"SV","AcctId":"9=
-901209303","ProductId":"00023","AcctBal":[{"BalType":"Current","CurAmt":{"A=
-mt":"0.00","CurCode":"000"}},{"BalType":"Avail","CurAmt":{"Amt":"0.00","Cur=
-Code":"000"}}],"AcctStatus":"Open","StatusDesc":"Open","Nickname":"Ahorro P=
-uro","StatusAcctDesc":"Activa"}},{"Name":"Ahorro Puro  terminada en 9312","=
-Type":"SV","ProductId":"9312","Signature":{"AcctType":"SV","AcctId":"990120=
-9312","ProductId":"00023","AcctBal":[{"BalType":"Current","CurAmt":{"Amt":"=
-0.00","CurCode":"000"}},{"BalType":"Avail","CurAmt":{"Amt":"0.00","CurCode"=
-:"000"}}],"AcctStatus":"Open","StatusDesc":"Open","Nickname":"Ahorro Puro",=
-"StatusAcctDesc":"Activa"}},{"Name":"Ahorro Puro  terminada en 9321","Type"=
-:"SV","ProductId":"9321","Signature":{"AcctType":"SV","AcctId":"9901209321"=
-,"ProductId":"00023","AcctBal":[{"BalType":"Current","CurAmt":{"Amt":"0.00"=
-,"CurCode":"000"}},{"BalType":"Avail","CurAmt":{"Amt":"0.00","CurCode":"000=
-"}}],"AcctStatus":"Open","StatusDesc":"Open","Nickname":"Ahorro Puro","Stat=
-usAcctDesc":"Activa"}},{"Name":"Ahorro Puro  terminada en 9330","Type":"SV"=
-,"ProductId":"9330","Signature":{"AcctType":"SV","AcctId":"9901209330","Pro=
-ductId":"00023","AcctBal":[{"BalType":"Current","CurAmt":{"Amt":"0.00","Cur=
-Code":"000"}},{"BalType":"Avail","CurAmt":{"Amt":"0.00","CurCode":"000"}}],=
-"AcctStatus":"Open","StatusDesc":"Open","Nickname":"Ahorro Puro","StatusAcc=
-tDesc":"Activa"}},{"Name":"Ahorro Puro  terminada en 9349","Type":"SV","Pro=
-ductId":"9349","Signature":{"AcctType":"SV","AcctId":"9901209349","ProductI=
-d":"00023","AcctBal":[{"BalType":"Current","CurAmt":{"Amt":"0.00","CurCode"=
-:"000"}},{"BalType":"Avail","CurAmt":{"Amt":"0.00","CurCode":"000"}}],"Acct=
-Status":"Open","StatusDesc":"Open","Nickname":"Ahorro Puro","StatusAcctDesc=
-":"Activa"}},{"Name":"Ahorro Puro  terminada en 9358","Type":"SV","ProductI=
-d":"9358","Signature":{"AcctType":"SV","AcctId":"9901209358","ProductId":"0=
-0023","AcctBal":[{"BalType":"Current","CurAmt":{"Amt":"0.00","CurCode":"000=
-"}},{"BalType":"Avail","CurAmt":{"Amt":"0.00","CurCode":"000"}}],"AcctStatu=
-s":"Open","StatusDesc":"Open","Nickname":"Ahorro Puro","StatusAcctDesc":"Ac=
-tiva"}},{"Name":"CUENTA DE NOMINA  terminada en 0100","Type":"SV","ProductI=
-d":"0100","Signature":{"AcctType":"SV","AcctId":"9996100100","ProductId":"0=
-0032","AcctBal":[{"BalType":"Current","CurAmt":{"Amt":"1474842573.85","CurC=
-ode":"000"}},{"BalType":"Avail","CurAmt":{"Amt":"1474842573.85","CurCode":"=
-000"}}],"AcctStatus":"Open","StatusDesc":"Open","Nickname":"CUENTA DE NOMIN=
-A","StatusAcctDesc":"Activa"}},{"Name":"CREDITO LIBRE INVERSION  terminada =
-en 9676","Type":"LN","ProductId":"9676","Signature":{"AcctType":"LN","AcctI=
-d":"001100829676","ProductId":"00041","MatDt":"2028-08-08","AcctBal":[{"Bal=
-Type":"Current","CurAmt":{"Amt":"39064476.69","CurCode":"000"}},{"BalType":=
-"Avail","CurAmt":{"Amt":"0.00","CurCode":"000"}}],"AcctStatus":"Open","Stat=
-usDesc":"Open","Nickname":"CREDITO LIBRE INVERSION","PmtMethod":"PrincipalA=
-ndInt","Rate":"1130100.00","Amt":"1206263.08","Payment":{"PaidCurAmt":{"Amt=
-":"40000000"},"EndDt":"2023-02-22","NextDt":"2023-01-03","Amt":"2578366","S=
-eqNum":"343","TotalCurAmt":{"Amt":"50427877.59"}}}},{"Name":"CREDITO VEHICU=
-LO  terminada en 9841","Type":"LN","ProductId":"9841","Signature":{"AcctTyp=
-e":"LN","AcctId":"001151289841","ProductId":"00004","MatDt":"2027-07-27","A=
-cctBal":[{"BalType":"Current","CurAmt":{"Amt":"33637279.03","CurCode":"000"=
-}},{"BalType":"Avail","CurAmt":{"Amt":"0.00","CurCode":"000"}}],"AcctStatus=
-":"Open","StatusDesc":"Open","Nickname":"CREDITO VEHICULO","PmtMethod":"Pri=
-ncipalAndInt","Rate":"1041296.10","Amt":"1280927.30","Payment":{"PaidCurAmt=
-":{"Amt":"35000000"},"EndDt":"2023-07-11","NextDt":"2023-01-03","Amt":"5682=
-056","SeqNum":"203","TotalCurAmt":{"Amt":"43223609.38"}}}},{"Name":"CREDITO=
- LIBRE INVERSION  terminada en 7136","Type":"LN","ProductId":"7136","Signat=
-ure":{"AcctType":"LN","AcctId":"001151397136","ProductId":"00041","MatDt":"=
-2025-12-16","AcctBal":[{"BalType":"Current","CurAmt":{"Amt":"0.00","CurCode=
-":"000"}},{"BalType":"Avail","CurAmt":{"Amt":"10700000.00","CurCode":"000"}=
-}],"AcctStatus":"Open","StatusDesc":"Open","Nickname":"CREDITO LIBRE INVERS=
-ION","PmtMethod":"PrincipalAndInt","Rate":"412412.00","Amt":"122.58"}},{"Na=
-me":"CREDITO LIBRE INVERSION  terminada en 7154","Type":"LN","ProductId":"7=
-154","Signature":{"AcctType":"LN","AcctId":"001151397154","ProductId":"0004=
-1","MatDt":"2025-12-16","AcctBal":[{"BalType":"Current","CurAmt":{"Amt":"98=
-37592.10","CurCode":"000"}},{"BalType":"Avail","CurAmt":{"Amt":"0.00","CurC=
-ode":"000"}}],"AcctStatus":"Open","StatusDesc":"Open","Nickname":"CREDITO L=
-IBRE INVERSION","PmtMethod":"PrincipalAndInt","Rate":"585947.10","Amt":"597=
-883.34","Payment":{"PaidCurAmt":{"Amt":"10700000"},"EndDt":"2023-06-14","Ne=
-xtDt":"2023-01-03","Amt":"600790","SeqNum":"0","TotalCurAmt":{"Amt":"114299=
-37.50"}}}},{"Name":"CREDITO DE LIBRANZA  terminada en 8367","Type":"LN","Pr=
-oductId":"8367","Signature":{"AcctType":"LN","AcctId":"001330068367","Produ=
-ctId":"00031","MatDt":"2031-04-11","AcctBal":[{"BalType":"Current","CurAmt"=
-:{"Amt":"55378892.87","CurCode":"000"}},{"BalType":"Avail","CurAmt":{"Amt":=
-"0.00","CurCode":"000"}}],"AcctStatus":"Open","StatusDesc":"Open","Nickname=
-":"CREDITO DE LIBRANZA","PmtMethod":"PrincipalAndInt","Rate":"801403.00","A=
-mt":"944083.00","Payment":{"PaidCurAmt":{"Amt":"61500000"},"EndDt":"2023-02=
--11","NextDt":"2023-01-03","Amt":"2638138","SeqNum":"385","TotalCurAmt":{"A=
-mt":"61502648.59"}}}},{"Name":"CREDITO LIBRE INVERSION  terminada en 3447",=
-"Type":"LN","ProductId":"3447","Signature":{"AcctType":"LN","AcctId":"00190=
-0423447","ProductId":"00041","MatDt":"2024-02-22","AcctBal":[{"BalType":"Cu=
-rrent","CurAmt":{"Amt":"6481997.34","CurCode":"000"}},{"BalType":"Avail","C=
-urAmt":{"Amt":"0.00","CurCode":"000"}}],"AcctStatus":"Open","StatusDesc":"O=
-pen","Nickname":"CREDITO LIBRE INVERSION","PmtMethod":"PrincipalAndInt","Ra=
-te":"163956.00","Amt":"189241.17","Payment":{"PaidCurAmt":{"Amt":"8000000"}=
-,"EndDt":"2023-02-22","NextDt":"2023-01-03","Amt":"698790","SeqNum":"404","=
-TotalCurAmt":{"Amt":"8241928.36"}}}}]=
-
---Apple-Mail=_09F4F225-03DB-47C9-9D59-F84A382100E3--
+[{"date":"2020","name":"certificado_Declaracion_5_1.pdf","type":"5","file":""},{"date":"2020","name":"certificado_Declaracion_6_2.pdf","type":"6","file":""}]
+--Apple-Mail=_5D381553-2BFE-471D-B817-66E9A73B4661--

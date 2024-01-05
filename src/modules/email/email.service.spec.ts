@@ -19,7 +19,7 @@ describe('EmailService', () => {
   describe('parseEmail', () => {
     it('should parse email successfully', async () => {
       const emailFilePath =
-        '/Users/franyelizacodeait/Desktop/mailer/mailer-parse/mailer-parse/emailWithJsonAttachment.eml';
+        '/Users/franyelizacodeait/Desktop/mailer/mailer-parse/mailer-parse/emailWithJsonAsUrl.eml';
       const parsedEmail = await service.parseEmail(emailFilePath);
 
       expect(parsedEmail).toBeDefined();
