@@ -15,4 +15,21 @@ describe('EmailService', () => {
   it('should be defined', () => {
     expect(service).toBeDefined();
   });
+
+  describe('parseEmail', () => {
+    it('should parse email successfully', async () => {
+      const emailFilePath =
+        '/Users/franyelizacodeait/Desktop/mailer/mailer-parse/mailer-parse/emailWithJsonAttachment.eml';
+      const parsedEmail = await service.parseEmail(emailFilePath);
+
+      expect(parsedEmail).toBeDefined();
+      expect(parsedEmail.subject).toEqual(expect.any(String));
+    });
+
+    it('should handle parsing errors', async () => {
+      const invalidEmailFilePath = 'franyeliza/wrong/path.eml';
+
+      await expect(service.parseEmail(invalidEmailFilePath)).rejects.toThrow();
+    });
+  });
 });

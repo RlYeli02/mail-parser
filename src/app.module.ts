@@ -3,7 +3,6 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { EmailModule } from './modules/email/email.module';
 
-
 @Module({
   controllers: [AppController],
   providers: [AppService],

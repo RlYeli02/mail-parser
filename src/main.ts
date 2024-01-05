@@ -20,7 +20,7 @@ async function bootstrap() {
   //   },
   //   express.static(serveStaticOptions.rootPath)
   // );
-  
+
   await app.listen(3000);
 }
 bootstrap();
